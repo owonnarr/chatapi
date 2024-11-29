@@ -64,7 +64,6 @@ class _LoginWidget extends State<LoginWidget> {
               children: [
                 TextField(
                   controller: loginController,
-                  // style: const TextStyle(color: Colors.white),
                   cursorColor: Colors.black54,
                   decoration: InputDecoration(
                     hintText: 'Логін',
@@ -77,7 +76,6 @@ class _LoginWidget extends State<LoginWidget> {
                 TextField(
                   controller: passwordController,
                   obscureText: true,
-                  // style: const TextStyle(color: Colors.white),
                   cursorColor: Colors.black54,
                   decoration: InputDecoration(
                     hintText: 'Пароль',

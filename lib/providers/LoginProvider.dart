@@ -21,10 +21,10 @@ class LoginProvider extends ChangeNotifier {
       _login = login;
       _avatar = result['data']['avatar'];
       if (rememberMe) {
-        final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('login', login);
-        await prefs.setString('avatar', result['data']['avatar'] as String);
-        await prefs.setInt('counter', 5);
+        final sharedStorage = await SharedPreferences.getInstance();
+        await sharedStorage.setString('login', login);
+        await sharedStorage.setString('avatar', result['data']['avatar'] as String);
+        await sharedStorage.setInt('counter', 5);
       }
     }
     notifyListeners();
